@@ -52,6 +52,14 @@ class FavoriteTableViewController: UITableViewController {
         // Create an option menu as an action sheet
         let optionMenu = UIAlertController(title: "Traveling!", message: "Would you like to see more?", preferredStyle: .actionSheet)
         
+        // Handle opening popovers on tablets
+        if let popoverController = optionMenu.popoverPresentationController {
+            if let cell = tableView.cellForRow(at: indexPath) {
+                popoverController.sourceView = cell
+                popoverController.sourceRect = cell.bounds
+            }
+        }
+        
         // Add actions to the menu
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         optionMenu.addAction(cancelAction)

@@ -2,7 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bOg-lz-kLs">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,8 +30,8 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tvf-q3-xhh">
                                                     <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="120" id="YDE-Pl-10o"/>
-                                                        <constraint firstAttribute="height" constant="120" id="aJV-L8-13Z"/>
+                                                        <constraint firstAttribute="width" constant="120" identifier="$ThumbnailWidth$" id="YDE-Pl-10o"/>
+                                                        <constraint firstAttribute="height" constant="120" identifier="$ThumbnailHeight$" id="aJV-L8-13Z"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CbC-LM-9SP">
@@ -48,19 +49,20 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smiley" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qCf-Fn-fOE">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face.smiling" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qCf-Fn-fOE">
                                                             <rect key="frame" x="0.0" y="57.5" width="20" height="19"/>
                                                         </imageView>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
+                                            <viewLayoutGuide key="safeArea" id="oS1-fD-Fj8"/>
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="u6i-kr-17n" secondAttribute="trailing" id="631-hS-TLR"/>
-                                        <constraint firstItem="u6i-kr-17n" firstAttribute="leading" secondItem="srr-fU-PVy" secondAttribute="leadingMargin" id="UPR-hR-B6r"/>
-                                        <constraint firstItem="u6i-kr-17n" firstAttribute="top" secondItem="srr-fU-PVy" secondAttribute="topMargin" id="ZaH-v7-lhc"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="u6i-kr-17n" secondAttribute="bottom" id="kqo-QY-xTB"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="u6i-kr-17n" secondAttribute="trailing" identifier="$TrailingMargin$" id="631-hS-TLR"/>
+                                        <constraint firstItem="u6i-kr-17n" firstAttribute="leading" secondItem="srr-fU-PVy" secondAttribute="leadingMargin" identifier="$LeadingMargin$" id="UPR-hR-B6r"/>
+                                        <constraint firstItem="u6i-kr-17n" firstAttribute="top" secondItem="srr-fU-PVy" secondAttribute="topMargin" identifier="$TopView$" id="ZaH-v7-lhc"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="u6i-kr-17n" secondAttribute="bottom" identifier="$BottomMargin$" id="kqo-QY-xTB"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -82,7 +84,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="smiley" catalog="system" width="128" height="121"/>
+        <image name="face.smiling" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
