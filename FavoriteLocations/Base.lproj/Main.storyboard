@@ -17,20 +17,20 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tablecell" id="enO-Yx-yNN" customClass="FavoriteTableViewCell" customModule="FavoriteLocations" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="122.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="142.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="enO-Yx-yNN" id="srr-fU-PVy">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="122.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="142.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="u6i-kr-17n">
-                                            <rect key="frame" x="20" y="11" width="374" height="100.5"/>
+                                            <rect key="frame" x="20" y="11" width="374" height="120.5"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tvf-q3-xhh">
-                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="100"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="120" id="YDE-Pl-10o"/>
-                                                        <constraint firstAttribute="height" constant="100" id="aJV-L8-13Z"/>
+                                                        <constraint firstAttribute="height" constant="120" id="aJV-L8-13Z"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CbC-LM-9SP">
@@ -42,7 +42,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1r-2O-yuj">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memory" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1r-2O-yuj">
                                                             <rect key="frame" x="0.0" y="31.5" width="63" height="20.5"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                             <nil key="textColor"/>
