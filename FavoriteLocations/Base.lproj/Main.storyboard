@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bOg-lz-kLs">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17701"/>
@@ -7,30 +7,30 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Favorite Table View Controller-->
         <scene sceneID="ecI-o9-fmW">
             <objects>
-                <tableViewController id="bOg-lz-kLs" sceneMemberID="viewController">
+                <tableViewController id="bOg-lz-kLs" customClass="FavoriteTableViewController" customModule="FavoriteLocations" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vfP-A0-il3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tablecell" id="enO-Yx-yNN">
-                                <rect key="frame" x="0.0" y="28" width="414" height="142.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tablecell" id="enO-Yx-yNN" customClass="FavoriteTableViewCell" customModule="FavoriteLocations" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="122.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="enO-Yx-yNN" id="srr-fU-PVy">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="142.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="122.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="u6i-kr-17n">
-                                            <rect key="frame" x="20" y="11" width="374" height="120.5"/>
+                                            <rect key="frame" x="20" y="11" width="374" height="100.5"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tvf-q3-xhh">
-                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tvf-q3-xhh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="100"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="120" id="YDE-Pl-10o"/>
-                                                        <constraint firstAttribute="height" constant="120" id="aJV-L8-13Z"/>
+                                                        <constraint firstAttribute="height" constant="100" id="aJV-L8-13Z"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CbC-LM-9SP">
@@ -63,6 +63,11 @@
                                         <constraint firstAttribute="bottomMargin" secondItem="u6i-kr-17n" secondAttribute="bottom" id="kqo-QY-xTB"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="locationLabel" destination="U6k-WG-O5j" id="Iko-iA-l4Z"/>
+                                    <outlet property="memoryLabel" destination="w1r-2O-yuj" id="UvR-QV-VK6"/>
+                                    <outlet property="thumbnailImageView" destination="Tvf-q3-xhh" id="hc7-QG-iWP"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

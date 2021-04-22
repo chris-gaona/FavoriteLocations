@@ -12,6 +12,8 @@
 		F276D3B32631077500A74EA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F276D3B12631077500A74EA5 /* Main.storyboard */; };
 		F276D3B52631077600A74EA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F276D3B42631077600A74EA5 /* Assets.xcassets */; };
 		F276D3B82631077600A74EA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F276D3B62631077600A74EA5 /* LaunchScreen.storyboard */; };
+		F276D3C22631118900A74EA5 /* FavoriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276D3C12631118900A74EA5 /* FavoriteTableViewController.swift */; };
+		F276D3C5263111A700A74EA5 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276D3C4263111A700A74EA5 /* FavoriteTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		F276D3B42631077600A74EA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F276D3B72631077600A74EA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F276D3B92631077600A74EA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F276D3C12631118900A74EA5 /* FavoriteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewController.swift; sourceTree = "<group>"; };
+		F276D3C4263111A700A74EA5 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				F276D3B42631077600A74EA5 /* Assets.xcassets */,
 				F276D3B62631077600A74EA5 /* LaunchScreen.storyboard */,
 				F276D3B92631077600A74EA5 /* Info.plist */,
+				F276D3C12631118900A74EA5 /* FavoriteTableViewController.swift */,
+				F276D3C4263111A700A74EA5 /* FavoriteTableViewCell.swift */,
 			);
 			path = FavoriteLocations;
 			sourceTree = "<group>";
@@ -135,7 +141,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F276D3AC2631077500A74EA5 /* AppDelegate.swift in Sources */,
+				F276D3C5263111A700A74EA5 /* FavoriteTableViewCell.swift in Sources */,
 				F276D3AE2631077500A74EA5 /* SceneDelegate.swift in Sources */,
+				F276D3C22631118900A74EA5 /* FavoriteTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
