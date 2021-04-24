@@ -11,10 +11,6 @@ class FavoriteTableViewController: UITableViewController {
     /* Table Implementation */
     lazy var dataSource = configureDataSource()
     
-    enum Section {
-        case all
-    }
-    
     var locations: [Location] = [
         Location(name: "Rome", memory: "Oh how the mighty fall in the gladiator ring!", image: "rome"),
         Location(name: "Arizona", memory: "The heat of the son makes my skin bubble like hot oil", image: "arizona"),
@@ -38,7 +34,7 @@ class FavoriteTableViewController: UITableViewController {
     func configureDataSource() -> UITableViewDiffableDataSource<Section, Location> {
         let cellIdentifier = "tablecell"
         
-        let dataSource = UITableViewDiffableDataSource<Section, Location> (
+        let dataSource = LocationDiffableDataSource (
             tableView: tableView,
             cellProvider: {tableView, indexPath, location in let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! FavoriteTableViewCell
             
@@ -81,5 +77,62 @@ class FavoriteTableViewController: UITableViewController {
         
         // Deselect the row
         tableView.deselectRow(at: indexPath, animated: false)
+    }
+    
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        guard let location = self.dataSource.itemIdentifier(for: indexPath) else {
+            return UISwipeActionsConfiguration()
+        }
+        
+        // Add to list action
+        let addToListAction = UIContextualAction(style: .normal, title: "") {
+            (action, sourceView, completionHandler) in
+            
+            let addToListTitle = location.name
+            let addToListAlert = UIAlertController(title: addToListTitle, message: "Sorry this feature is not available yet. Please try later.", preferredStyle: .alert)
+            addToListAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(addToListAlert, animated: true, completion: nil)
+            
+            completionHandler(true)
+        }
+        
+        // Share action
+        let shareAction = UIContextualAction(style: .normal, title: "") {
+            (action, sourceView, completionHandler) in
+            
+            let defaultText = "I want to go to " + location.name
+            
+            let activityController: UIActivityViewController
+            
+            if let imageToShare = UIImage(named: location.image) {
+                activityController = UIActivityViewController(activityItems: [defaultText, imageToShare], applicationActivities: nil)
+            } else {
+                activityController = UIActivityViewController(activityItems: [defaultText], applicationActivities: nil)
+            }
+            
+            // Add popover support for ipad & ipod touch
+            if let popoverController = activityController.popoverPresentationController {
+                if let cell = tableView.cellForRow(at: indexPath) {
+                    popoverController.sourceView = cell
+                    popoverController.sourceRect = cell.bounds
+                }
+            }
+            
+            self.present(activityController, animated: true, completion: nil)
+            completionHandler(true)
+        }
+        
+        // Setting colors & icons for the swipeable actions
+        addToListAction.backgroundColor = UIColor.systemGreen
+        addToListAction.image = UIImage(systemName: "plus.circle.fill")
+        
+        shareAction.backgroundColor = UIColor.systemOrange
+        shareAction.image = UIImage(systemName: "square.and.arrow.up.fill")
+        
+        // Configure actions a swipeable actions
+        let swipeConfiguration = UISwipeActionsConfiguration(actions: [shareAction, addToListAction])
+        
+        return swipeConfiguration
     }
 }
