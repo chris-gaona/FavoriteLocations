@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F2705EC32634694600D71A51 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2705EC22634694600D71A51 /* Location.swift */; };
 		F276D3AC2631077500A74EA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276D3AB2631077500A74EA5 /* AppDelegate.swift */; };
 		F276D3AE2631077500A74EA5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276D3AD2631077500A74EA5 /* SceneDelegate.swift */; };
 		F276D3B32631077500A74EA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F276D3B12631077500A74EA5 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F2705EC22634694600D71A51 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		F276D3A82631077500A74EA5 /* FavoriteLocations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FavoriteLocations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F276D3AB2631077500A74EA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F276D3AD2631077500A74EA5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F2705EBE263468F800D71A51 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F276D3C4263111A700A74EA5 /* FavoriteTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F2705EBF263468FE00D71A51 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F276D3C12631118900A74EA5 /* FavoriteTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F2705EC02634690600D71A51 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F2705EC22634694600D71A51 /* Location.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F2705EC12634691000D71A51 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				F276D3B12631077500A74EA5 /* Main.storyboard */,
+				F276D3B62631077600A74EA5 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 		F276D39F2631077500A74EA5 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +93,14 @@
 		F276D3AA2631077500A74EA5 /* FavoriteLocations */ = {
 			isa = PBXGroup;
 			children = (
+				F2705EC12634691000D71A51 /* Storyboard */,
+				F2705EC02634690600D71A51 /* Model */,
+				F2705EBF263468FE00D71A51 /* Controller */,
+				F2705EBE263468F800D71A51 /* View */,
 				F276D3AB2631077500A74EA5 /* AppDelegate.swift */,
 				F276D3AD2631077500A74EA5 /* SceneDelegate.swift */,
-				F276D3B12631077500A74EA5 /* Main.storyboard */,
 				F276D3B42631077600A74EA5 /* Assets.xcassets */,
-				F276D3B62631077600A74EA5 /* LaunchScreen.storyboard */,
 				F276D3B92631077600A74EA5 /* Info.plist */,
-				F276D3C12631118900A74EA5 /* FavoriteTableViewController.swift */,
-				F276D3C4263111A700A74EA5 /* FavoriteTableViewCell.swift */,
 			);
 			path = FavoriteLocations;
 			sourceTree = "<group>";
@@ -143,6 +178,7 @@
 				F276D3AC2631077500A74EA5 /* AppDelegate.swift in Sources */,
 				F276D3C5263111A700A74EA5 /* FavoriteTableViewCell.swift in Sources */,
 				F276D3AE2631077500A74EA5 /* SceneDelegate.swift in Sources */,
+				F2705EC32634694600D71A51 /* Location.swift in Sources */,
 				F276D3C22631118900A74EA5 /* FavoriteTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
