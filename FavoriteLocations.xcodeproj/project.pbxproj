@@ -20,6 +20,7 @@
 		F276D3B82631077600A74EA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F276D3B62631077600A74EA5 /* LaunchScreen.storyboard */; };
 		F276D3C22631118900A74EA5 /* FavoriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276D3C12631118900A74EA5 /* FavoriteTableViewController.swift */; };
 		F276D3C5263111A700A74EA5 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276D3C4263111A700A74EA5 /* FavoriteTableViewCell.swift */; };
+		F2E06EDD263785D300C12C32 /* LocationDetailTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E06EDC263785D300C12C32 /* LocationDetailTextCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		F276D3B92631077600A74EA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F276D3C12631118900A74EA5 /* FavoriteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewController.swift; sourceTree = "<group>"; };
 		F276D3C4263111A700A74EA5 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
+		F2E06EDC263785D300C12C32 /* LocationDetailTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailTextCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				F276D3C4263111A700A74EA5 /* FavoriteTableViewCell.swift */,
 				F25559F1263717C3000AFD25 /* LocationDetailHeaderView.swift */,
+				F2E06EDC263785D300C12C32 /* LocationDetailTextCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				F276D3AC2631077500A74EA5 /* AppDelegate.swift in Sources */,
 				F25559F2263717C3000AFD25 /* LocationDetailHeaderView.swift in Sources */,
 				F276D3C5263111A700A74EA5 /* FavoriteTableViewCell.swift in Sources */,
+				F2E06EDD263785D300C12C32 /* LocationDetailTextCell.swift in Sources */,
 				F25559E826371270000AFD25 /* LocationDetailViewController.swift in Sources */,
 				F25559CF263496BC000AFD25 /* LocationDiffableDataSource.swift in Sources */,
 				F276D3AE2631077500A74EA5 /* SceneDelegate.swift in Sources */,

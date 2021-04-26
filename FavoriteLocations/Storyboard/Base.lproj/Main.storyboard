@@ -147,21 +147,30 @@
                                     </connections>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="yub-Mg-3XW">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LocationDetailTextCell" id="yub-Mg-3XW" customClass="LocationDetailTextCell" customModule="FavoriteLocations" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="473" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yub-Mg-3XW" id="XVM-3U-B7Y">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntE-NU-7Lw">
+                                                    <rect key="frame" x="20" y="11" width="374" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ntE-NU-7Lw" secondAttribute="bottom" id="Cj0-Ph-cVg"/>
+                                                <constraint firstItem="ntE-NU-7Lw" firstAttribute="leading" secondItem="XVM-3U-B7Y" secondAttribute="leadingMargin" id="Q2s-tc-Xl0"/>
+                                                <constraint firstItem="ntE-NU-7Lw" firstAttribute="top" secondItem="XVM-3U-B7Y" secondAttribute="topMargin" id="foO-nc-YJk"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ntE-NU-7Lw" secondAttribute="trailing" id="new-jg-tnj"/>
+                                            </constraints>
                                         </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Xng-k4-QfE">
-                                        <rect key="frame" x="0.0" y="516.5" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xng-k4-QfE" id="Jjh-Yt-UdO">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="memoryLabel" destination="ntE-NU-7Lw" id="V4g-pi-TvE"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
