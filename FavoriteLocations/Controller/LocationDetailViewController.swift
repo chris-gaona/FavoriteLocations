@@ -9,23 +9,20 @@ import UIKit
 
 class LocationDetailViewController: UIViewController {
     
+    @IBOutlet var tableView: UITableView!
+    @IBOutlet var headerView: LocationDetailHeaderView!
+    
     var location: Location = Location()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        navigationController?.navigationBar.prefersLargeTitles = false
+        
+        // Configure header view
+        headerView.headerImageView.image = UIImage(named: location.image)
+        headerView.nameLabel.text = location.name
+        
+        // TODO: heart button wire up
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

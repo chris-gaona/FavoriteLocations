@@ -138,6 +138,7 @@ class FavoriteTableViewController: UITableViewController {
         return swipeConfiguration
     }
     
+    // Pass data along to the LocationDetailViewController segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "LocationDetailViewController" {
             if let indexPath = tableView.indexPathForSelectedRow {
