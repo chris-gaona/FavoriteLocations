@@ -118,7 +118,7 @@
                                             </state>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPi-Fq-2vX">
-                                            <rect key="frame" x="20" y="391" width="244" height="34"/>
+                                            <rect key="frame" x="20" y="391" width="344" height="34"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -137,7 +137,7 @@
                                         <constraint firstItem="Jwb-Ml-Gkq" firstAttribute="top" secondItem="4Qw-8N-gTG" secondAttribute="top" id="kHH-5h-egv"/>
                                         <constraint firstItem="LPi-Fq-2vX" firstAttribute="leading" secondItem="4Qw-8N-gTG" secondAttribute="leading" constant="20" id="nks-Ye-vpu"/>
                                         <constraint firstAttribute="trailing" secondItem="GfQ-U4-2Qz" secondAttribute="trailing" constant="20" id="qIM-bL-fB6"/>
-                                        <constraint firstAttribute="trailing" secondItem="LPi-Fq-2vX" secondAttribute="trailing" constant="150" id="yk9-3c-m5m"/>
+                                        <constraint firstAttribute="trailing" secondItem="LPi-Fq-2vX" secondAttribute="trailing" constant="50" id="yk9-3c-m5m"/>
                                         <constraint firstItem="egQ-OE-9MK" firstAttribute="leading" secondItem="4Qw-8N-gTG" secondAttribute="leading" id="zYF-LO-wqf"/>
                                     </constraints>
                                     <connections>
