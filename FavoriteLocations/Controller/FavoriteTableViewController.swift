@@ -51,35 +51,35 @@ class FavoriteTableViewController: UITableViewController {
     /* End Table Implementation */
     
     /* Row did select handling */
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // Create an option menu as an action sheet
-        let optionMenu = UIAlertController(title: "Traveling!", message: "Would you like to see more?", preferredStyle: .actionSheet)
-        
-        // Handle opening popovers on tablets
-        if let popoverController = optionMenu.popoverPresentationController {
-            if let cell = tableView.cellForRow(at: indexPath) {
-                popoverController.sourceView = cell
-                popoverController.sourceRect = cell.bounds
-            }
-        }
-        
-        // Add actions to the menu
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        optionMenu.addAction(cancelAction)
-        
-        let moreAction = UIAlertAction(title: "Show more!", style: .default) { (action: UIAlertAction!) -> Void in
-            let alertMessage = UIAlertController(title: "Not available yet", message: "Sorry this feature is not available yet. Please try later.", preferredStyle: .alert)
-            alertMessage.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(alertMessage, animated: true, completion: nil)
-        }
-        optionMenu.addAction(moreAction)
-        
-        // Display the menu
-        self.present(optionMenu, animated: true, completion: nil)
-        
-        // Deselect the row
-        tableView.deselectRow(at: indexPath, animated: false)
-    }
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        // Create an option menu as an action sheet
+//        let optionMenu = UIAlertController(title: "Traveling!", message: "Would you like to see more?", preferredStyle: .actionSheet)
+//
+//        // Handle opening popovers on tablets
+//        if let popoverController = optionMenu.popoverPresentationController {
+//            if let cell = tableView.cellForRow(at: indexPath) {
+//                popoverController.sourceView = cell
+//                popoverController.sourceRect = cell.bounds
+//            }
+//        }
+//
+//        // Add actions to the menu
+//        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+//        optionMenu.addAction(cancelAction)
+//
+//        let moreAction = UIAlertAction(title: "Show more!", style: .default) { (action: UIAlertAction!) -> Void in
+//            let alertMessage = UIAlertController(title: "Not available yet", message: "Sorry this feature is not available yet. Please try later.", preferredStyle: .alert)
+//            alertMessage.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//            self.present(alertMessage, animated: true, completion: nil)
+//        }
+//        optionMenu.addAction(moreAction)
+//
+//        // Display the menu
+//        self.present(optionMenu, animated: true, completion: nil)
+//
+//        // Deselect the row
+//        tableView.deselectRow(at: indexPath, animated: false)
+//    }
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
@@ -136,5 +136,14 @@ class FavoriteTableViewController: UITableViewController {
         let swipeConfiguration = UISwipeActionsConfiguration(actions: [shareAction, addToListAction])
         
         return swipeConfiguration
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "LocationDetailViewController" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let destinationController = segue.destination as! LocationDetailViewController
+                destinationController.location = self.locations[indexPath.row]
+            }
+        }
     }
 }

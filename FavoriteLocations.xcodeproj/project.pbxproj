@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F25559CF263496BC000AFD25 /* LocationDiffableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25559CE263496BC000AFD25 /* LocationDiffableDataSource.swift */; };
+		F25559E826371270000AFD25 /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25559E726371270000AFD25 /* LocationDetailViewController.swift */; };
 		F2705EC32634694600D71A51 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2705EC22634694600D71A51 /* Location.swift */; };
 		F276D3AC2631077500A74EA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276D3AB2631077500A74EA5 /* AppDelegate.swift */; };
 		F276D3AE2631077500A74EA5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276D3AD2631077500A74EA5 /* SceneDelegate.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		F25559CE263496BC000AFD25 /* LocationDiffableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDiffableDataSource.swift; sourceTree = "<group>"; };
+		F25559E726371270000AFD25 /* LocationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailViewController.swift; sourceTree = "<group>"; };
 		F2705EC22634694600D71A51 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		F276D3A82631077500A74EA5 /* FavoriteLocations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FavoriteLocations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F276D3AB2631077500A74EA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				F276D3C12631118900A74EA5 /* FavoriteTableViewController.swift */,
+				F25559E726371270000AFD25 /* LocationDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			files = (
 				F276D3AC2631077500A74EA5 /* AppDelegate.swift in Sources */,
 				F276D3C5263111A700A74EA5 /* FavoriteTableViewCell.swift in Sources */,
+				F25559E826371270000AFD25 /* LocationDetailViewController.swift in Sources */,
 				F25559CF263496BC000AFD25 /* LocationDiffableDataSource.swift in Sources */,
 				F276D3AE2631077500A74EA5 /* SceneDelegate.swift in Sources */,
 				F2705EC32634694600D71A51 /* Location.swift in Sources */,

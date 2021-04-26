@@ -69,6 +69,7 @@
                                     <outlet property="locationLabel" destination="U6k-WG-O5j" id="Iko-iA-l4Z"/>
                                     <outlet property="memoryLabel" destination="w1r-2O-yuj" id="UvR-QV-VK6"/>
                                     <outlet property="thumbnailImageView" destination="Tvf-q3-xhh" id="hc7-QG-iWP"/>
+                                    <segue destination="DH4-AJ-mZX" kind="show" identifier="LocationDetailViewController" id="vsA-y3-Wvb"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -82,6 +83,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1gd-jN-kLk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="673.91304347826087" y="159.375"/>
+        </scene>
+        <!--Location Detail View Controller-->
+        <scene sceneID="lkZ-Mk-xr0">
+            <objects>
+                <viewController id="DH4-AJ-mZX" customClass="LocationDetailViewController" customModule="FavoriteLocations" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WuA-vo-ejv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="azB-lP-uvh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="d7N-Ai-8Mf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6QV-r1-QZz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1409" y="159"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yQj-eg-Ruf">
