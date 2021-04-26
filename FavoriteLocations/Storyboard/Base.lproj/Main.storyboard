@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bOg-lz-kLs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zBI-4e-TGq">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Favorite Table View Controller-->
+        <!--Favorite Locations-->
         <scene sceneID="ecI-o9-fmW">
             <objects>
                 <tableViewController id="bOg-lz-kLs" customClass="FavoriteTableViewController" customModule="FavoriteLocations" customModuleProvider="target" sceneMemberID="viewController">
@@ -77,10 +77,29 @@
                             <outlet property="delegate" destination="bOg-lz-kLs" id="vqD-S8-Nsp"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Favorite Locations" id="J4s-G1-aNT"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1gd-jN-kLk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-236" y="160"/>
+            <point key="canvasLocation" x="673.91304347826087" y="159.375"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yQj-eg-Ruf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zBI-4e-TGq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bcq-1m-GAK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bOg-lz-kLs" kind="relationship" relationship="rootViewController" id="QIe-Gx-KPx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B6j-16-2Nb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-236.23188405797103" y="159.375"/>
         </scene>
     </scenes>
     <resources>

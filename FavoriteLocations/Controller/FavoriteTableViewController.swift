@@ -23,6 +23,8 @@ class FavoriteTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
         tableView.separatorStyle = .none
         
         var snapshot = NSDiffableDataSourceSnapshot<Section, Location>()
